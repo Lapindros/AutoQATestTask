@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Start" verbose="1" parallel="tests"
+       thread-count="5" configfailurepolicy="continue">
+
+    <test name="API tests" annotations="JDK" preserve-order="true">
+        <classes>
+            <class name="api.Pets" />
+        </classes>
+    </test>
+
+    <test name="UI tests" annotations="JDK" preserve-order="true">
+        <classes>
+            <class name="api.Users" />
+            <class name="ui.Auth" />
+        </classes>
+    </test>
+
+</suite>
